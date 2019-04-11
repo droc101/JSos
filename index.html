@@ -1,0 +1,390 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <title>JSos 1.0</title>
+  </head>
+  <body>
+    <div id="taskbar">
+      <button class="taskBar" id="apps"><i class="material-icons" style="font-size:14px;">apps</i></button>
+      <button class="taskBar" id="nc"><i class="material-icons" style="font-size:14px;">notifications</i><b>3</b></button>
+      <button class="taskBar"><i class="material-icons" style="font-size:14px;">network_wifi</i></button>
+      <button class="taskBar"><i class="material-icons" style="font-size:14px;">wallpaper</i></button>
+    </div>
+    <div id="window">
+      <div id="titlebar">
+        &nbsp
+        <i class="material-icons">person</i>&nbspLog In
+      </div>
+      User ID&nbsp
+      <input type="text" id="user-id"><br> Passcode
+      <input type="password" id="user-code"><br>
+      <p id="status" style="color: red;">
+      </p>
+      <button class="default" id="logIn">
+     <i class="material-icons" style="font-size:14px;">n</i>Log In
+     </button>
+      <button>
+     <i class="material-icons" style="font-size:14px;">person_add</i>Add Account
+     </button>
+    </div>
+    <div id="Settings">
+      <div id="Settings-Bar">
+        <button>
+     <i class="material-icons" style="font-size:14px;" onclick="$('#Settings').hide();">close</i>
+     </button>
+        <button>
+     <i class="material-icons" style="font-size:14px;">remove</i>
+     </button>
+        <button>
+     <i class="material-icons" style="font-size:14px;">add</i>
+     </button> &nbsp
+        <i class="material-icons">settings</i>&nbspSettings
+      </div>
+      <div id="Setting-Toolbar">
+        <button>
+     <i class="material-icons" style="font-size:14px;">security</i>Log In Authorize
+     </button>
+      </div>
+      <button class="tile">
+     <i class="material-icons" style="font-size:48px;">settings_applications</i><br>Apps
+     </button>
+      <button class="tile">
+     <i class="material-icons" style="font-size:48px;">settings_brightness</i><br>Brightness
+     </button>
+      <button class="tile" id="themeShow">
+     <i class="material-icons" style="font-size:48px;">brightness_medium</i><br>Themes
+     </button>
+      <button class="tile">
+     <i class="material-icons" style="font-size:48px;">folder</i><br>Storage
+     </button>
+    </div>
+    <div id="menu">
+      <h3>
+        Applications
+      </h3>
+      <button class="tile" onclick="$('#Settings').show();">
+        <i class="material-icons" style="font-size:48px;">settings</i><br>Settings
+      </button>
+      <button class="tile" onclick="$('#Files').show();">
+        <i class="material-icons" style="font-size:48px;">folder</i><br>Files
+      </button>
+    </div>
+    <div id="Files">
+      <div id="Files-Bar">
+        <button>
+     <i class="material-icons" style="font-size:14px;" onclick="$('#Files').hide();">close</i>
+     </button>
+        <button>
+     <i class="material-icons" style="font-size:14px;">remove</i>
+     </button>
+        <button>
+     <i class="material-icons" style="font-size:14px;">add</i>
+     </button> &nbsp
+        <i class="material-icons">folder</i>&nbspFiles
+      </div>
+      <div id="Files-Toolbar">
+        <button>
+     <i class="material-icons" style="font-size:14px;">arrow_drop_down</i>File
+     </button>
+      </div>
+      <div class="list" id="filesList">
+        <p>
+          <i class="material-icons" style="font-size:14px;">folder</i>Root<br>&nbsp&nbsp<i class="material-icons" style="font-size:14px;">folder</i>My Files<br>
+        </p>
+      </div>
+    </div>
+    <div class="message">
+      <div id="close">
+        <button class="special" onclick="$('.message').hide();">
+ <i class="material-icons" style="font-size:14px;">close</i>
+        </button>
+      </div>
+      <p style="color: #fff;">
+        Old Style Messagebox (use {{darkMsg}} to activate)
+      </p>
+    </div>
+    <div class="nc">
+      <h1 style="color: white;">
+        &nbsp<i class="material-icons">notifications</i>Notifications&nbsp&nbsp&nbsp&nbsp<button class="special" onclick="$('.nc').hide();">
+    <i class="material-icons" style="font-size:14px;">close</i>
+    </button>
+        <hr>
+      </h1>
+      <div class="ncInner" id="ncInner">
+        <div class="notification">
+          <p style="color: white; font-size: 20px;">
+            <b>Debug Tools (Beta Only!)</b>
+          </p>
+          <button onclick="testNotifications();" id="info">
+    <i class="material-icons" style="font-size:14px;">notification_important</i>Information...
+    </button><br>
+          <button onclick="testNotifications();" id="test">
+    <i class="material-icons" style="font-size:14px;">notification_important</i>Test Notification System
+    </button><br>
+          <button onclick=" $('#msgBox').show();">
+    <i class="material-icons" style="font-size:14px;">info</i>Show Messagebox
+    </button><br>
+          <button onclick=" $('.message').show();">
+    <i class="material-icons" style="font-size:14px;">info</i>Show Dark Messagebox (Outdated)
+    </button><br>
+          <button onclick=" $('#confBox').show();">
+    <i class="material-icons" style="font-size:14px;">info</i>Show Confirm Dialog
+    </button><br>
+          <button onclick=" $('#textBox').show();">
+    <i class="material-icons" style="font-size:14px;">info</i>Show Text Prompt Dialog
+    </button><br>
+          <p style="color: white;">
+            <i class="material-icons" style="font-size:14px;">info</i>The dark messgaebox WILL NOT show error info.
+          </p>
+        </div>
+        <br>
+        <div class="notification">
+          <p style="color: white; font-size: 20px;">
+            <b>Changelog</b>
+          </p>
+          <ul style="color: white;">
+            <li>Added 'notification' class to stylesheets; used in notification center</li>
+            <li>Recolered UI Elements to comply with flat UI standards</li>
+            <li>Added Confirm Dialog with OK and CANCEL options</li>
+            <li>Added Text dialog with textBox and buttons</li>
+          </ul>
+          <p style="color: white;">
+            Version 2.4
+          </p>
+        </div>
+        <br>
+        <div class="notification">
+          <p style="color: white; font-size: 20px;">
+            <b>Toolbox</b>
+          </p>
+          <table>
+            <tbody>
+              <tr>
+                <td>Brightness<input type="range" min="1" max="100" value="50" class="slider" id="myRange"></td>
+                <td>Volume<input type="range" min="1" max="100" value="50" class="slider" id="myRange"></td>
+              </tr>
+            </tbody>
+          </table>
+          <center>
+            <button class="smallTile">
+<i class="material-icons" style="font-size:22px;">settings</i><br>
+</button>
+            <button class="smallTile">
+<i class="material-icons" style="font-size:22px;">folder</i><br>
+</button>
+            <button class="smallTile">
+<i class="material-icons" style="font-size:22px;">library_music</i><br>
+</button>
+            <button class="smallTile">
+<i class="material-icons" style="font-size:22px;">movie</i><br>
+</button>
+            <button class="smallTile">
+<i class="material-icons" style="font-size:22px;">web</i><br>
+</button>
+          </center>
+          <p>
+            Here for now, will be moved somewhere else in the future.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div id="msgBox">
+      <div id="msgBar">
+        &nbsp
+        <i class="material-icons">priority_high</i>&nbspMessage From Application
+      </div>
+      <p id="msgText">
+      </p>
+      <div id="close" style="background-color: #eee;">
+        <button class="default" onclick="$('#msgBox').hide();">
+      OK
+      </button>&nbsp
+      </div>
+    </div>
+    <div id="confBox">
+      <div id="confBar">
+        &nbsp
+        <i class="material-icons">priority_high</i>&nbspConfirm Action
+      </div>
+      <p id="confText">
+      </p>
+      <div id="close" style="background-color: #eee;">
+        <button class="default" onclick="$('#confBox').hide(); var Response = 'true'">
+        OK
+      </button>
+        <button onclick="$('#confBox').hide(); var x = null">
+      Cancel
+      </button>&nbsp
+      </div>
+    </div>
+    <div id="textBox">
+      <div id="textBar">
+        &nbsp
+        <i class="material-icons">priority_high</i>&nbspEnter Text
+      </div>
+      <p id="textText">
+        Enter Text:
+      </p>
+      <input type="text" id="textBox" style="border: 1px solid #000;
+  background-color: #fff; border-radius: 0px; width: 200px">
+      <div id="close" style="background-color: #eee;">
+        <button class="default" onclick="$('#textBox').hide(); var Response = 'true'">
+        OK
+      </button>
+        <button onclick="$('#textBox').hide(); var x = null">
+      Cancel
+      </button>&nbsp
+      </div>
+    </div>
+    <div id="themeBox">
+      <div id="themeBar">
+        &nbsp
+        <i class="material-icons">brightness_medium</i>&nbspTheme Setup
+      </div>
+      Background Color: &nbsp
+      <input type="color" id="color" value="#5581a8"><br>
+      <div id="close" style="background-color: #eee;">
+        <button class="default" id="setColor">
+        OK
+      </button>
+        <button id="nope">
+      Cancel
+      </button>&nbsp
+      </div>
+    </div>
+    <div id="webBox">
+      <div id="webBar">
+        &nbsp
+        <i class="material-icons">build</i>&nbspTesting Window
+      </div>
+      <div id="webToolbar">
+        <div class="dropdown">
+      <button class="dropbtn">File</button>
+      <div class="dropdown-content">
+        <button class="menuItem">
+  <i class="material-icons" style="font-size:14px;">insert_drive_file</i>Open...
+  </button>
+        <hr class="menuSeperator">
+        <button class="menuItem">
+  <i class="material-icons" style="font-size:14px;">delete</i>Delete File
+  </button>
+  <button class="menuItem">
+  <i class="material-icons" style="font-size:14px;">n</i>Copy
+  </button>
+        <button class="menuItem">
+  <i class="material-icons" style="font-size:14px;">n</i>Paste
+  </button>
+  <button class="menuItem">
+  <i class="material-icons" style="font-size:14px;">n</i>Quit
+  </button>
+      </div>
+      </div>
+      <div class="dropdown2">
+      <button class="dropbtn2">Help</button>
+      <div class="dropdown-content2">
+        <button class="menuItem">
+  <i class="material-icons" style="font-size:14px;">info</i>About
+  </button>
+        <hr class="menuSeperator">
+        <button class="menuItem">
+  <i class="material-icons" style="font-size:14px;">help</i>Open Help Window
+  </button>
+    </div>
+    </div>
+      </div>
+      <p>
+      {{windowHeight}} is no longer defined, allowing <i>Dynamic Content</i><br><b>Only <i>Experimental</i> features are shown.</b>
+      </p>
+      <div id="widgetFactory">
+      &nbsp&nbsp<button class="tab" id="1">
+      Tab 1
+      </button>
+      <button class="tab" id="2">
+      Tab 2
+      </button>
+      <button class="tab" id="3">
+      Tab 3
+      </button>
+      <div id="tab1" class="content">
+      Tabbed UI
+      <br>
+      Currently In Beta.
+      <br>
+      Overflow is set to scroll.
+      <div style="background-color: #eee; height: 150px; border: 1px solid #000;">
+      Represents an image
+      </div>
+      </div>
+      <div id="tab2" class="content">
+      Tab 2 Contents
+      </div>
+      <div id="tab3" class="content">
+      Tab 3 Contents
+      </div>
+      <!--<input type="checkbox">Experimental Checkbox (default)<br>
+      <button class="checkbox">
+      <i class="material-icons" id="checkbox" style="font-size:20px;">check_box</i>
+      </button>-->
+      </div>
+      <p style="font-size: 1px;">
+      
+      </p>
+    </div>
+    <div id=devWindow>
+      <div id="devTitlebar">
+        &nbsp
+        <i class="material-icons">polymer</i>&nbspJSos Developer SDK (beta)
+      </div>
+      <textarea>      object mainWindow as JSos.window with properties {
+        isResizeable: true;
+        isDraggable: true;
+        isShelvable: true;
+        icon: n;
+        titleText: 'Main Window';
+        windowContentType: 'declared';
+        windowContent: object mainWindowContents as child(mainWindow) with uiObjects {
+          label{text: 'Hello, World', color: #000, x: 5, y: 5};
+          button{text: 'Close', type: highlight, x: 5, y: 25, action: mainWindow.close};
+        };
+      }
+      function main handles mainWindow.allEvents as JSos.baseHandler{
+        //Main Window Events, Code, and Handlers
+      };
+      
+      function onLoad handles myAppName.onLaunch as JSos.launchHandler{
+        //Initial Setup Code
+        allocate 50k at null for myAppName.myVariables;
+        allocate 10m at $FD56 for myAppName.myUI ifCrash(crashHandler);
+        allocate dynamic at null for myAppName.graphicKit;
+      };
+      
+      function onClose handles myAppName.onClose as JSos.closeHandler{
+        //Clear public/global variables to prevent lag
+        open memory at JSos.memoryLocation;
+      };
+      
+      function crashHandler handles myAppName.memoryOverwrite as JSos.crashHandler{
+        //Clear allocated memory and close program to prevent system crash
+        remove memory at JSos.memoryLocation;
+        myAppName.forceClose;
+      };
+      **
+      The only problem with declaring window contents with html is that you cannot access them to assign properties later.
+      
+      to change the app to allow this is simple.
+      
+      replace windowContentType: 'declared';
+      with windowContentType: 'htmlObject';
+      
+      and windowContent: object mainWindowContents blah {blah}
+      with windowContent: object link: windowContentsAsHtml;
+      
+      then define the unstyled objects in an object called 'windowContentsAsHtml' as type html.
+      **
+      object windowContentsAsHtml as html {
+        <windowContents><p>Hello, World</p><button>Close</button></windowContents>
+      };</textarea>
+    </div>
+    <textarea id="log" readonly></textarea>
+  </body>
+</html>

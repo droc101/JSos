@@ -1,0 +1,387 @@
+.blurredImage {
+  filter: blur(1px);
+}
+
+#window {
+  border: 1px solid #000;
+  background-color: #eeeeee;
+  width: 250px;
+  border-radius: 5px;
+}
+
+#titlebar {
+  background-color: #f9f9f9;
+  border-radius: 5px;
+}
+
+#Settings {
+  border: 1px solid #000;
+  width: 300px;
+  height: 300px;
+  background-color: #eeeeee;
+  border-radius: 5px;
+}
+
+#Settings-Bar {
+  background-color: #f9f9f9;
+  border-radius: 5px;
+}
+
+#Setting-Toolbar {
+  border: 1px solid #e2e2e2e2;
+  background-color: #e2e2e2e2;
+  border-radius: 5px;
+}
+
+.tile {
+  width: 75px;
+  height: 75px;
+  background-color: #e8e8e8;
+  border: 1px solid #e8e8e8;
+}
+
+.tile:hover {
+  width: 75px;
+  height: 75px;
+}
+
+#menu {
+  width: 250px;
+  background: rgba(0, 0, 0, 0.7);
+  border: 1px solid #000;
+  border-radius: 5px;
+  color: white;
+}
+
+#Files {
+  border: 1px solid #000;
+  width: 300px;
+  height: 300px;
+  background-color: #eeeeee;
+  border-radius: 5px;
+}
+
+#Files-Bar {
+  background-color: #f9f9f9;
+  border-radius: 5px;
+}
+
+#Files-Toolbar {
+  border: 1px solid #e2e2e2e2;
+  background-color: #e2e2e2e2;
+  border-radius: 5px;
+}
+
+.list {
+  width: 100px;
+  height: 243px;
+  background: rgb(235, 235, 235);
+  background: #fff;
+  border: 1px solid #eeeeee;
+  border-radius: 5px;
+}
+
+.message {
+  width: 250px;
+  background: rgba(0, 0, 0, 0.7);
+  border: 1px solid #000;
+  border-radius: 3px;
+  border-radius: 5px;
+}
+
+#close {
+  direction: rtl;
+  background: #555;
+  border-radius: 5px;
+}
+
+button.default {
+  border: 1px solid #006fd3;
+  background-color: #0087ff;
+  border-radius: 3px;
+  color: white;
+}
+
+button {
+  border: 1px solid #000;
+  background-color: #fff;
+  border-radius: 3px;
+}
+
+button.special {
+  border: 1px solid #fff;
+  background-color: #555;
+  border-radius: 3px;
+  color: #fff;
+}
+
+* {
+  font-family: Arial, Sans, sans-serif;
+}
+
+#taskbar {
+  background-color: #eee;
+  border-radius: 15px;
+  width: 131px;
+}
+
+div.nc {
+  width: 300px;
+  height: 400px;
+  background: rgba(0, 0, 0, 0.7);
+  border-radius: 5px;
+  padding: 4px;
+}
+
+#msgBox {
+  border: 1px solid #000;
+  width: 400px;
+  background-color: #eeeeee;
+  border-radius: 5px;
+}
+
+#msgBar {
+  background-color: #f9f9f9;
+  border-radius: 5px;
+}
+
+button.taskBar {
+  border: 1px solid #fff;
+  border-radius: 15px;
+  background-color: #555;
+  color: white;
+}
+
+#confBox {
+  border: 1px solid #000;
+  width: 400px;
+  background-color: #eeeeee;
+  border-radius: 5px;
+}
+
+#confBar {
+  background-color: #f9f9f9;
+  border-radius: 5px;
+}
+
+#textBox {
+  border: 1px solid #000;
+  width: 202px;
+  background-color: #eeeeee;
+  border-radius: 5px;
+}
+
+#textBar {
+  background-color: #f9f9f9;
+  border-radius: 5px;
+}
+
+div.notification {
+  background-color: rgba(102, 102, 102, 0.5);
+  border-radius: 5px;
+  padding: 4px;
+  color: white;
+}
+
+.smallTile {
+  width: 50px;
+  height: 50px;
+  background-color: #e8e8e8;
+  border: 1px solid #e8e8e8;
+}
+
+body {
+  background-color: #5581a8;
+  background-image: url("https://user-images.githubusercontent.com/30186107/29488525-f55a69d0-84da-11e7-8a39-5476f663b5eb.png");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: 300px 200px;
+}
+
+.ncInner {
+  overflow-y: scroll;
+  overflow-x: hidden;
+  height: 305px;
+}
+
+#themeBox {
+  border: 1px solid #000;
+  width: 400px;
+  background-color: #eeeeee;
+  border-radius: 5px;
+}
+
+#themeBar {
+  background-color: #f9f9f9;
+  border-radius: 5px;
+}
+
+#webBox {
+  border: 1px solid #000;
+  width: 400px;
+  background-color: #eeeeee;
+  border-radius: 5px;
+}
+
+#webBar {
+  background-color: #f9f9f9;
+  border-radius: 5px;
+}
+
+.menuItem {
+  background-color: #e2e2e2;
+  width: 150px;
+  border-radius: 0px;
+  border: 0px solid #e2e2e2;
+  text-align: left;
+}
+
+.menuItem:hover {
+  background-color: #9ea6ff;
+  width: 150px;
+  border-radius: 0px;
+  border: 0px solid #4f5cff;
+  text-align: left;
+  color: white;
+}
+
+.menuItem:active {
+  background-color: #707bff;
+  width: 150px;
+  border-radius: 0px;
+  border: 0px dotted #707bff;
+  text-align: left;
+  color: white;
+}
+
+.dropbtn {
+  background-color: #eee;
+  color: black;
+  border: none;
+  cursor: pointer;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+  background-color: #e2e2e2;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #e2e2e2;
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #f1f1f1;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown:hover .dropbtn {
+  background-color: #9ea6ff;
+  border: 0px dotted #707bff;
+}
+
+.dropbtn2 {
+  background-color: #eee;
+  color: black;
+  border: none;
+  cursor: pointer;
+}
+
+.dropdown2 {
+  position: relative;
+  display: inline-block;
+  background-color: #e2e2e2;
+}
+
+.dropdown-content2 {
+  display: none;
+  position: absolute;
+  background-color: #e2e2e2;
+  z-index: 1;
+}
+
+.dropdown-content2 a:hover {
+  background-color: #f1f1f1;
+}
+
+.dropdown2:hover .dropdown-content2 {
+  display: block;
+}
+
+.dropdown2:hover .dropbtn2 {
+  background-color: #9ea6ff;
+  border: 0px dotted #707bff;
+}
+
+hr.menuSeperator {
+  color: #eee;
+}
+
+button.checkbox {
+    background: rgba(0, 0, 0, 0.0);
+    border: 1px solid rgba(0, 0, 0, 0.0);
+}
+
+#widgetFactory {
+  background-color: #eee;
+  border: 1px solid #d6d6d6;
+  margin: 2px;
+  border-radius: 5px;
+  padding: 2px;
+}
+
+button.tab {
+  background-color: #f9f9f9;
+  border: none;
+  border-radius: 0px;
+}
+
+div.content {
+  background-color: #fff;
+  border: 1px solid #d6d6d6;
+  margin: 2px;
+  border-radius: 5px;
+  padding: 2px;
+  height: 150px;
+  overflow-x: scroll;
+}
+
+#devWindow {
+  border: 1px solid #000;
+  background-color: #eeeeee;
+  border-radius: 5px;
+  height: 250px;
+}
+
+#devTitlebar {
+  background-color: #f9f9f9;
+  border-radius: 5px;
+}
+
+textarea {
+   resize: none;
+   width: 99%;
+   height: 215px;
+}
+
+#log {
+  height: 100px;
+  width: 200px;
+  resize: both;
+  font-family: courier, monospace;
+  user-select: none; 
+}
